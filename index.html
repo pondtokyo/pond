@@ -9,6 +9,11 @@
 
     body {
       background: #000 url('images/hero.jpg') center center / cover no-repeat fixed;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        background-position: 20% center;
       color: #f4f1ec;
       font-family: "Times New Roman", Times, serif;
       min-height: 100vh;
@@ -16,6 +21,9 @@
       flex-direction: column;
       justify-content: space-between;
       padding: 10vh 8vw;
+    }
+
+      }
     }
 
     body::before {
