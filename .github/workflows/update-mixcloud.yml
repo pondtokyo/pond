@@ -1,0 +1,22 @@
+name: Update Mixcloud
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # 毎日UTC 0時（日本時間 9時）
+  workflow_dispatch:       # 手動実行も可
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate mixcloud.html
+        run: python3 generate_mixcloud.py
+
+      - name: Commit and push if changed
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add mixcloud.html
+          git diff --cached --quiet || git commit -m "Update Mixcloud" && git push
