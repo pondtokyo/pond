@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Instagram — POND</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    :root {
+      --bg: #f4f1ec;
+      --text: #1c1c1a;
+      --text-dim: rgba(28,28,26,0.35);
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: "Times New Roman", Times, serif;
+      min-height: 100vh;
+    }
+
+    .wrap {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 8vh 6vw;
+    }
+
+    header {
+      display: flex;
+      align-items: baseline;
+      gap: 32px;
+      margin-bottom: 10vh;
+    }
+
+    .back {
+      font-size: 0.75rem;
+      letter-spacing: 0.25em;
+      color: var(--text-dim);
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+
+    .back:hover { color: var(--text); }
+
+    header h1 {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+      font-weight: normal;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+    }
+
+    footer {
+      margin-top: 12vh;
+      font-size: 0.7rem;
+      letter-spacing: 0.2em;
+      color: var(--text-dim);
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <a class="back" href="index.html">← Pond</a>
+      <h1>Instagram</h1>
+    </header>
+    <main>
+      <behold-widget feed-id="jXmowpCM2Yq7P30qUoYN"></behold-widget>
+      <script>
+        (() => {
+          const d=document,s=d.createElement("script");s.type="module";
+          s.src="https://w.behold.so/widget.js";d.head.append(s);
+        })();
+      </script>
+    </main>
+    <footer>© POND</footer>
+  </div>
+</body>
+</html>
